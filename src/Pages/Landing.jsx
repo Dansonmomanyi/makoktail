@@ -34,7 +34,7 @@ const Landing = () => {
     <div className='page-content'>
       <div className='content-wrapper'>
         <SearchForm onSearch={handleSearch} />
-        <CocktailList drinks={searchedDrinks.length > 0 ? searchedDrinks : drinks} />
+        <CocktailList drinks={searchedDrinks && searchedDrinks.length > 0 ? searchedDrinks : drinks} />
       </div>
     </div>
   )
