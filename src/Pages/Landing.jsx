@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import SearchForm from '../components/SearchForm'
@@ -16,7 +16,11 @@ const Landing = () => {
     queryKey: ['cocktails', 'a'],
     queryFn: () => fetchCocktails('a'),
   })
-  const [searchedDrinks, setSearchedDrinks] = useState(drinks)
+  const [searchedDrinks, setSearchedDrinks] = useState([])
+
+  useEffect(() => {
+    setSearchedDrinks(drinks)
+  }, [drinks])
 
   const handleSearch = (searchResults) => {
     setSearchedDrinks(searchResults)
