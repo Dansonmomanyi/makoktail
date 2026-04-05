@@ -8,7 +8,7 @@ const Wrapper = styled.nav`
   padding: 1.5rem 2rem;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 999;
   
   .nav-center {
     max-width: 1400px;

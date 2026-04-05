@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { About, Error, HomeLayout, Landing, Newsletter, Cocktail } from './Pages';
+import './index.css';
 import { LoadingProvider } from './context/LoadingContext';
 
 import { action as newsletterAction } from './Pages/Newsletter';
