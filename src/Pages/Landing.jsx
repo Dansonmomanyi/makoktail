@@ -16,11 +16,11 @@ const Landing = () => {
     queryKey: ['cocktails', 'a'],
     queryFn: () => fetchCocktails('a'),
   })
-  const [searchedDrinks, setSearchedDrinks] = useState([])
+  const [searchedDrinks, setSearchedDrinks] = useState(drinks)
 
   useEffect(() => {
     setSearchedDrinks(drinks)
-  }, [drinks])
+  }, [])
 
   const handleSearch = (searchResults) => {
     setSearchedDrinks(searchResults)
