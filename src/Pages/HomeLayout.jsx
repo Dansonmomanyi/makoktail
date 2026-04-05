@@ -1,13 +1,15 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 
 const HomeLayout = () => {
+  const location = useLocation()
+  
   return (
     <div className='layout-container'>
       <Navbar />
       <section className='page-section'>
-        <Outlet />
+        <Outlet key={location.pathname} />
       </section>
     </div>
   )
